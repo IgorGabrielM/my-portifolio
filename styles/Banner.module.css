@@ -1,0 +1,14 @@
+.bannerPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circleFromImage{
+    background-color: #131313;
+    border-radius: 800px;
+}
+
+.programingBro{
+    width: 900px;
+}

@@ -1,0 +1,32 @@
+.cardContainer{
+    height: 800px;
+    padding: 20px;
+    margin: 100px;
+    border-radius: 10px;
+    background-color: #131313;
+    text-align: center;
+    box-shadow: rgba(154, 0, 255, 0.37) 0px 3px 8px;
+}
+
+.selectorSkill{
+    margin-top: 40px;
+    width: 1000px;
+    height: 70px;
+    border: 5px solid white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.optionSkill{
+    height: 100%;
+    width: 100%;
+    font-size: 35px;
+    border-radius: 100px;
+}
+
+.optionSkill:hover{
+    background-image: linear-gradient(to right, #7b00ff, #5b01b9);
+    color: #131313;
+    transition: 0.5s;
+}

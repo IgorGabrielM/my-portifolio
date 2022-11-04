@@ -1,0 +1,5 @@
+.container{
+    background-image: url("../public/images/banner-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
