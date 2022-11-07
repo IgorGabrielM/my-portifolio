@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1198b281-2db7-46c9-ac37-673e7a69c7d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/banner.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/skills.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/programingBro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/Banner.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/skill.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/skills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/skills.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/skill.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/skill.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -99,7 +93,9 @@
       <workItem from="1667518082866" duration="2636000" />
       <workItem from="1667520747424" duration="3953000" />
       <workItem from="1667576871459" duration="5103000" />
-      <workItem from="1667593605715" duration="7680000" />
+      <workItem from="1667593605715" duration="8391000" />
+      <workItem from="1667841609073" duration="825000" />
+      <workItem from="1667847716083" duration="9549000" />
     </task>
     <servers />
   </component>
