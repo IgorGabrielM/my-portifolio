@@ -7,18 +7,22 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  color: white;
 }
 
 h1{
-  font-family: 'Anton', sans-serif;;
+  font-family: 'Anton', sans-serif;
+  color: white;
 }
 
 h2{
   font-family: 'Press Start 2P', cursive;
+  color: white;
 }
 
 p{
   font-family: 'Source Sans Pro', sans-serif;
+  color: white;
 }
 
 a {

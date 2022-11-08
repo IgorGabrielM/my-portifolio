@@ -9,6 +9,33 @@
     border-radius: 800px;
 }
 
+.boxTextBanner{
+    width: 900px;
+}
+
 .programingBro{
     width: 900px;
+}
+
+@media(min-width: 100px){
+    .programingBro{
+        width: 700px;
+    }
+}
+
+@media(max-width: 700px){
+    .boxTextBanner{
+        margin-top: 100px;
+    }
+    .boxTextBanner h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .circleFromImage{
+        background-color: #131313;
+        border-radius: 800px;
+        visibility: hidden;
+    }
 }

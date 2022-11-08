@@ -48,11 +48,21 @@ export default function Banner(){
     return(
         <div className="bg-[url('/banner-bg.png')]">
             <div className={styles.bannerPage}>
-                <TrackVisibility>
+                <TrackVisibility className={styles.boxTextBanner}>
                     {({isVisible}) =>
                         <div className={isVisible ? 'animate__animated animate__fadeIn': ""}>
-                            <h1 className="text-8xl ml-5">{`Olá sou o Igor`}</h1>
-                            <h1 className="txt-rotate text-8xl ml-5">Desenvolvedor <span  data-rotate='[ "frontend", "mobile" ]'><span className="wrap">{text}</span></span> </h1>
+                            <h1 className="
+                            xl:text-8xl
+                            lg:text-6xl
+                            md:text-6xl
+                            sm:text-4xl
+                             ml-5">{`Olá sou o Igor`}</h1>
+                            <h1 className="txt-rotate
+                            xl:text-8xl
+                            lg:text-6xl
+                            md:text-6xl
+                            sm:text-4xl
+                            ml-5">Desenvolvedor <span  data-rotate='[ "frontend", "mobile" ]'><span className="wrap">{text}</span></span> </h1>
                         </div>
                     }
                 </TrackVisibility>
