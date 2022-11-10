@@ -1,0 +1,15 @@
+.listProjects{
+    width: 100vw;
+    display: flex;
+}
+
+.cardProject{
+    width: 100%;
+    background-color: aliceblue;
+    margin-inline: 10px;
+}
+
+.cardProject h3{
+    color: #131313;
+    font-size: 5vh;
+}

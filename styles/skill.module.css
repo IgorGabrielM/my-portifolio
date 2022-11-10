@@ -1,7 +1,7 @@
 .cardContainer{
-    height: 800px;
+    height: 100%;
     padding: 20px;
-    margin: 100px;
+    margin: 10px 100px 50px 100px;
     border-radius: 10px;
     background-color: #131313;
     text-align: center;
@@ -39,7 +39,7 @@
 
 .cardDescriptionSkill{
     width: 170vh;
-    height: 100px;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -49,4 +49,44 @@
     border-radius: 10px;
     margin-inline: 20px;
     margin-top: 10px;
+}
+
+.description{
+    width: 50%;
+    padding: 20px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #131313;
+}
+
+.projectsCard{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25px;
+    color: #131313;
+}
+
+.projectsCard h1{
+    font-size: 4vh;
+    color: #131313;
+    margin-bottom: 5px;
+}
+
+
+.projectsCard img{
+    height: 350px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+
+.projectsCard a{
+    font-size: 30px;
+    color: aliceblue;
+    text-decoration-line: underline;
 }
