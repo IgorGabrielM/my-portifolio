@@ -38,16 +38,20 @@ export default function Projects(){
 
     return(
         <div>
+            <h2 className='text-6xl mb-10 flex justify-center'>Projetos</h2>
             <div className={styles.listProjects}>
+                <div className={styles.scrollCard}>
                 {
                     projects !== null ? projects.map((project) => {
                         return(
-                        <div className={styles.cardProject}>
-                            <h3>{project.name}</h3>
-
-                        </div>
+                                <div className={styles.cardProject}>
+                                    <h3>{project.name}</h3>
+                                    <img src={project.image} alt=""/>
+                                    <p className={styles.projectDescription}>{project.description}</p>
+                                </div>
                         )}) : 'Nenhum projeto encontrado'
                 }
+                </div>
             </div>
         </div>
     )

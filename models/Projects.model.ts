@@ -3,4 +3,8 @@ export type ProjectsModel = {
     description: string;
     image: string;
     link: string;
+    language: {
+        name: string;
+        icon: string;
+    };
 }
