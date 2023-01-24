@@ -1,15 +1,15 @@
 import styles from "../styles/Banner.module.css";
 import TrackVisibility from "react-on-screen";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import 'animate.css'
 
-export default function Banner(){
+export default function Banner() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = [ "frontend", "mobile" ];
+    const toRotate = ["frontend", "mobile"];
     const period = 1000;
 
     useEffect(() => {
@@ -45,31 +45,21 @@ export default function Banner(){
         }
     }
 
-    return(
+    return (
         <div className="bg-[url('/banner-bg.png')]">
             <div className={styles.bannerPage}>
                 <TrackVisibility className={styles.boxTextBanner}>
-                    {({isVisible}) =>
-                        <div className={isVisible ? 'animate__animated animate__fadeIn': ""}>
-                            <h1 className="
-                            xl:text-8xl
-                            lg:text-6xl
-                            md:text-6xl
-                            sm:text-4xl
-                             ml-5">{`Olá sou o Igor`}</h1>
-                            <h1 className="txt-rotate
-                            xl:text-8xl
-                            lg:text-6xl
-                            md:text-6xl
-                            sm:text-4xl
-                            ml-5">Desenvolvedor <span  data-rotate='[ "frontend", "mobile" ]'><span className="wrap">{text}</span></span> </h1>
+                    {({ isVisible }) =>
+                        <div className={isVisible ? 'animate__animated animate__fadeIn' : ""}>
+                            <h1 className="ml-5">{`Olá sou o Igor`}</h1>
+                            <h1 className="ml-5">Desenvolvedor <span data-rotate='[ "frontend", "mobile" ]'><span className="wrap">{text}</span></span> </h1>
                         </div>
                     }
                 </TrackVisibility>
                 <div className={styles.circleFromImage}>
-                    <img src='/images/programingBro.png' alt="Pessoa programando" className={styles.programingBro}/>
+                    <img src='/images/programingBro.png' alt="Pessoa programando" className={styles.programingBro} />
                 </div>
-                </div>
+            </div>
         </div>
     )
 }

@@ -10,12 +10,6 @@ export default function Skills(){
             description: 'Desenvolvo aplicações profissionais com angular com dashboards complexos',
             color: '#6236E3',
             image: 'https://www.svgrepo.com/show/327335/logo-angular.svg',
-            lastProject: {
-                name: 'Pokedex',
-                description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
-                image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
-                link: 'https://github.com/IgorGabrielM/my-pokedex'
-            }
         }
     )
     const [backGroundColor, setBackGroundColor] = useState('#6236E3')
@@ -27,25 +21,13 @@ export default function Skills(){
             description: 'Desenvolvo aplicações profissionais com angular com dashboards complexos',
             color: '#6236E3',
             image: 'https://www.svgrepo.com/show/327335/logo-angular.svg',
-            lastProject: {
-                name: 'Pokedex',
-                description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
-                image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
-                link: 'https://github.com/IgorGabrielM/my-pokedex'
-            }
         },
         {
             id: 2,
             title: 'Ionic',
             description: 'Desenvolvo apps mobilefirst completos usando o ionc',
             color: '#FF4858',
-            image: 'https://www.svgrepo.com/show/327369/logo-ionic.svg',
-            lastProject: {
-                name: 'Pokedex',
-                description: '',
-                image: '',
-                link: '',
-            }
+            image: 'https://www.svgrepo.com/show/327369/logo-ionic.svg'
         },
         {
             id: 3,
@@ -53,12 +35,6 @@ export default function Skills(){
             description: 'Desenvolvo aplicações pro hobbiie pois é uma linguagem mt funcional e divertida',
             color: '#00CCC0',
             image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-            lastProject: {
-                name: 'Pokedex',
-                description: '',
-                image: '',
-                link: '',
-            }
         }
     ])
 
@@ -98,13 +74,9 @@ export default function Skills(){
                     <div className={styles.barColored}/>
                     <div className='flex'>
                         <div className={styles.description}>
-                            { selectedSkill.description}
-                        </div>
-                        <div className={styles.projectsCard}>
-                            <h1>{'Projeto mais recente: ' + selectedSkill.lastProject.name}</h1>
-                            <img src={selectedSkill.lastProject.image}/>
-                            {selectedSkill.lastProject.description}
-                            <a href={selectedSkill.lastProject.link}>Ver mais</a>
+                            <p>
+                                { selectedSkill.description}
+                            </p>
                         </div>
                     </div>
                 </div>

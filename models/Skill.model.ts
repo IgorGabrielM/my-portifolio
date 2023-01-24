@@ -4,10 +4,4 @@ export type SkillModel = {
     description: string;
     color: string;
     image: string;
-    lastProject: {
-        name: string;
-        description: string;
-        image: string;
-        link: string;
-    }
 }

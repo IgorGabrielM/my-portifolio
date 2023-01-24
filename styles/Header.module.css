@@ -1,19 +1,60 @@
-.header{
+.header {
     position: fixed;
     height: 130px;
     display: flex;
     justify-content: space-between;
     border-radius: 0 0 15px 15px;
-    /* From https://css.glass */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
 }
 
-.imageProfile{
+.headerCompact {
+    display: none;
+}
+
+.imageProfile {
     position: absolute;
     margin-top: 15px;
     margin-left: 30px;
     width: 200px;
     border-radius: 70px;
+}
+
+@media only screen and (max-width: 1150px) {
+    .header {
+        display: none;
+    }
+
+    .headerCompact {
+        display: flex;
+    }
+
+    .headerItem {
+        margin-left: 93%;
+        margin-top: 15px;
+    }
+
+    .headerBox {
+        width: 50px;
+        height: 50px;
+        background-color: aliceblue;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .headerItem {
+        margin-left: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .headerItem {
+        margin-left: 85%;
+    }
 }

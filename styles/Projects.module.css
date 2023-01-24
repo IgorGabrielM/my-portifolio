@@ -1,34 +1,6 @@
-.listProjects{
-    width: 100vw;
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    margin-bottom: 100px;
-}
-
-.scrollCard{
-    width: 200vw;
-    display: flex;
-}
-
-.cardProject{
-    width: 450vh;
+.cardProjectItem {
+    width: 450px;
     padding: 10px;
-    margin-inline: 100px;
     background-image: linear-gradient(to right, #667eea, #764ba2);
     border-radius: 10px;
-}
-
-.cardProject h3{
-    color: #131313;
-    font-size: 4vh;
-}
-
-.cardProject img{
-    width: 440vh;
-    height: 300px;
-}
-
-.cardProject p{
-    font-size: 2vh;
 }

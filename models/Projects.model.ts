@@ -4,7 +4,7 @@ export type ProjectsModel = {
     image: string;
     link: string;
     language: {
-        name: string;
-        icon: string;
+        title: string;
+        image: string;
     };
 }
