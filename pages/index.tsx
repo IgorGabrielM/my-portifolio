@@ -1,10 +1,11 @@
 import styles from '../styles/Home.module.css'
 
-import Header from "../components/header";
-import Banner from "../components/banner";
-import Skills from "../components/skills";
-import Projects from "../components/projects";
-import AboutMe from "../components/aboutMe";
+import Welcome from '../components/home';
+import Header from '../components/header';
+import Banner from '../components/banner';
+import Skills from '../components/skills';
+import Projects from '../components/projects';
+import AboutMe from '../components/aboutMe';
 
 export default function Home() {
   return (

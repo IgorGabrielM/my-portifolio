@@ -1,33 +1,45 @@
 import styles from '../styles/skill.module.css'
-import {useEffect, useState} from "react";
-import {SkillModel} from "../models/Skill.model";
+import { useState } from "react";
+import { SkillModel } from "../models/Skill.model";
 
-export default function Skills(){
-    const [selectedSkill, setSelectedSkill]: [SkillModel, any] = useState(
+export default function Skills() {
+    const [levelNames, handleLevelNames]: [{ title: string, value: number }[], any] = useState([
         {
-            id: 1,
-            title: 'Angular',
-            description: 'Desenvolvo aplicações profissionais com angular com dashboards complexos',
-            color: '#6236E3',
-            image: 'https://www.svgrepo.com/show/327335/logo-angular.svg',
-        }
-    )
-    const [backGroundColor, setBackGroundColor] = useState('#6236E3')
-    const [nameSkill, setNameSkill] = useState('Angular')
+            title: "Iniciante",
+            value: 1,
+        },
+        {
+            title: "Iniante avançado",
+            value: 2,
+        },
+        {
+            title: "Intermediário",
+            value: 3,
+        },
+        {
+            title: "Confortável",
+            value: 4,
+        },
+        {
+            title: "Avançado",
+            value: 5,
+        },
+    ])
+
     const [skills, handleSkills]: [SkillModel[], any] = useState([
         {
             id: 1,
             title: 'Angular',
             description: 'Desenvolvo aplicações profissionais com angular com dashboards complexos',
-            color: '#6236E3',
             image: 'https://www.svgrepo.com/show/327335/logo-angular.svg',
+            level: 4
         },
         {
             id: 2,
             title: 'Ionic',
             description: 'Desenvolvo apps mobilefirst completos usando o ionc',
-            color: '#FF4858',
-            image: 'https://www.svgrepo.com/show/327369/logo-ionic.svg'
+            image: 'https://www.svgrepo.com/show/327369/logo-ionic.svg',
+            level: 3,
         },
         {
             id: 3,
@@ -35,50 +47,47 @@ export default function Skills(){
             description: 'Desenvolvo aplicações pro hobbiie pois é uma linguagem mt funcional e divertida',
             color: '#00CCC0',
             image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+            level: 2,
         }
     ])
 
-    const [projects, handleProjects] = useState([])
-
-    function getSkillSelected(skill: SkillModel){
-        setSelectedSkill(skill);
-    }
-
-    function getInformation(title:string, color: string, skill: SkillModel){
-        setNameSkill(title)
-        setBackGroundColor(color);
-        getSkillSelected(skill)
-    }
-
-    useEffect(() => {
-    }, [backGroundColor, nameSkill])
-
-
-    return(
-        <div className={styles.cardContainer}>
-            <h2 className='text-6xl mt-2'>Habilidades</h2>
+    return (
+        //<div className={styles.cardContainer}>
+        <div className='h-fit p-20 m-10 rounded-md bg-black text-center shadow-[#d79bff69]'>
+            <h2 className='text-4xl my-2'>Habilidades</h2>
             <div className="flex justify-center">
-                <div className={styles.selectorSkill}>
-                    { skills !== null ? skills.map((skill) => {
-                        return  (
-                            <div onClick={() => getInformation(skill.title ,skill.color, skill)} className={styles.styleSelected} style={{backgroundColor: skill.color, padding: '20px'}}>
-                                <img src={skill.image} alt={skill.title} className={styles.imageIcon}/>
+
+                <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 xl:grid-cols-4 shadow-[#d79bff69]'>
+
+                    {skills !== null ? skills.map((skill) => {
+                        return (
+                            <div>
+                                <div className='w-64 h-fit p-5 bg-[#d8d8d8] m-5 rounded-sm text-[#181718] shadow-lg shadow-[#d79bff69]'>
+                                    <div className='text-3xl flex justify-between items-center mx-5'>
+                                        <h1>{skill.title}</h1>
+                                        <img src={skill.image} className='w-12'></img>
+                                    </div>
+                                    <hr className='my-2 border-2 border-gray-400' />
+                                    <div className='text-2xl  text-left'>
+                                        <p>{skill.description}</p>
+                                    </div>
+                                    <div className='footer'>
+                                        <ol className={styles.progressBar}>
+
+                                            {levelNames !== null ? levelNames.map((levelName, index) => {
+                                                return (
+                                                    <li className={skill.level >= index + 1 ? styles.isComplete : undefined}><span>{levelName.title}</span></li>
+                                                )
+                                            }) : <h1>Erro no sistema</h1>}
+                                        </ol>
+                                    </div>
+                                </div>
+
                             </div>
+
+
                         )
-                    }): <h1>Erro no sistema</h1> }
-                </div>
-            </div>
-            <div className={styles.containerSkill}>
-                <div className={styles.cardDescriptionSkill} style={{backgroundColor: backGroundColor}}>
-                    <h1 className='text-5xl mt-5 text-black'>{nameSkill}</h1>
-                    <div className={styles.barColored}/>
-                    <div className='flex'>
-                        <div className={styles.description}>
-                            <p>
-                                { selectedSkill.description}
-                            </p>
-                        </div>
-                    </div>
+                    }) : <h1>Erro no sistema</h1>}
                 </div>
             </div>
         </div>
