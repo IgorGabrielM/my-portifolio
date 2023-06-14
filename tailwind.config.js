@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/public/images/banner-ng.png')",
-      }
+      },
     },
   },
   plugins: [],

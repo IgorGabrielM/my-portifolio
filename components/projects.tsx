@@ -43,8 +43,8 @@ export default function Projects() {
             image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
             link: 'https://github.com/IgorGabrielM/my-pokedex',
             language: {
-                name: '',
-                icon: '',
+                title: 'Next',
+                image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
             },
         },
         {
@@ -53,13 +53,11 @@ export default function Projects() {
             image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
             link: 'https://github.com/IgorGabrielM/my-pokedex',
             language: {
-                name: '',
-                icon: '',
+                title: 'Next',
+                image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
             },
         }
     ])
-
-    //<div className={styles.cardProject}>
 
     return (
         <div>

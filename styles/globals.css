@@ -21,63 +21,6 @@ body {
   color: white;
 }
 
-@media (max-width: 900px) {
-
-  html,
-  body {
-    width: 130vw;
-  }
-}
-
-@media (max-width: 700px) {
-
-  html,
-  body {
-    width: 150vw;
-  }
-}
-
-@media (max-width: 600px) {
-
-  html,
-  body {
-    width: 190vw;
-  }
-}
-
-@media (max-width: 600px) {
-
-  html,
-  body {
-    width: 220vw;
-  }
-}
-
-@media (max-width: 500px) {
-
-  html,
-  body {
-    width: 280vw;
-  }
-}
-
-@media (max-width: 320px) {
-
-  html,
-  body {
-    width: 320vw;
-  }
-}
-
-@media (max-width: 300px) {
-
-  html,
-  body {
-    width: 400vw;
-  }
-}
-
-
 h1 {
   font-family: 'Anton', sans-serif;
 }

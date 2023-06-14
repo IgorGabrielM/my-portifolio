@@ -52,44 +52,38 @@ export default function Skills() {
     ])
 
     return (
-        //<div className={styles.cardContainer}>
-        <div className='h-fit p-20 m-10 rounded-md bg-black text-center shadow-[#d79bff69]'>
-            <h2 className='text-4xl my-2'>Habilidades</h2>
+        <div className='h-fit p-20 m-10 rounded-md min-[550px]:bg-black max-[550px]:w-screen max-[550px]:m-0 text-center shadow-[#d79bff69]'>
+            <div className={styles.title}>
+                <h2 >Habilidades</h2>
+            </div>
             <div className="flex justify-center">
-
-                <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 xl:grid-cols-4 shadow-[#d79bff69]'>
-
+                <div className='grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 shadow-[#d79bff69] '>
                     {skills !== null ? skills.map((skill) => {
                         return (
-                            <div>
-                                <div className='w-64 h-fit p-5 bg-[#d8d8d8] m-5 rounded-sm text-[#181718] shadow-lg shadow-[#d79bff69]'>
-                                    <div className='text-3xl flex justify-between items-center mx-5'>
-                                        <h1>{skill.title}</h1>
-                                        <img src={skill.image} className='w-12'></img>
-                                    </div>
-                                    <hr className='my-2 border-2 border-gray-400' />
-                                    <div className='text-2xl  text-left'>
-                                        <p>{skill.description}</p>
-                                    </div>
-                                    <div className='footer'>
-                                        <ol className={styles.progressBar}>
-
-                                            {levelNames !== null ? levelNames.map((levelName, index) => {
-                                                return (
-                                                    <li className={skill.level >= index + 1 ? styles.isComplete : undefined}><span>{levelName.title}</span></li>
-                                                )
-                                            }) : <h1>Erro no sistema</h1>}
-                                        </ol>
-                                    </div>
+                            <div className='w-64 h-fit p-5 bg-[#d8d8d8] rounded-sm text-[#181718] shadow-lg shadow-[#d79bff69]'>
+                                <div className='text-3xl flex justify-between items-center mx-5'>
+                                    <h1>{skill.title}</h1>
+                                    <img src={skill.image} className='w-12'></img>
                                 </div>
+                                <hr className='my-2 border-2 border-gray-400' />
+                                <div className='text-2xl  text-left'>
+                                    <p>{skill.description}</p>
+                                </div>
+                                <div className='footer'>
+                                    <ol className={styles.progressBar}>
 
+                                        {levelNames !== null ? levelNames.map((levelName, index) => {
+                                            return (
+                                                <li className={skill.level >= index + 1 ? styles.isComplete : undefined}><span>{levelName.title}</span></li>
+                                            )
+                                        }) : <h1>Erro no sistema</h1>}
+                                    </ol>
+                                </div>
                             </div>
-
-
                         )
                     }) : <h1>Erro no sistema</h1>}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
