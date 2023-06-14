@@ -1,6 +1,5 @@
 import styles from '../styles/Home.module.css'
 
-import Welcome from '../components/home';
 import Header from '../components/header';
 import Banner from '../components/banner';
 import Skills from '../components/skills';
