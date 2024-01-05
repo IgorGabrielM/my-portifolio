@@ -51,7 +51,7 @@ export default function Banner() {
                 <TrackVisibility className={styles.boxTextBanner}>
                     {({ isVisible }) =>
                         <div className={isVisible ? 'animate__animated animate__fadeIn' : ""}>
-                            <h1 className="ml-5">{`Olá sou o Igor`}</h1>
+                            <h1 className="ml-5">Olá sou Igor</h1>
                             <h1 className="ml-5">Desenvolvedor <span data-rotate='[ "frontend", "mobile" ]'><span className="wrap">{text}</span></span> </h1>
                         </div>
                     }

@@ -4,3 +4,55 @@
     background-image: linear-gradient(to right, #667eea, #764ba2);
     border-radius: 10px;
 }
+
+.swiperScreenMid,
+.swiperScreenSmall {
+    visibility: hidden;
+    display: none;
+}
+
+.title {
+    font-size: 3vw;
+}
+
+@media (max-width: 1550px) {
+    .swiperScreenLarge {
+        visibility: hidden;
+        display: none;
+    }
+
+    .cardProjectItem {
+        width: 450px;
+        padding: 10px;
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+        border-radius: 10px;
+    }
+
+    .swiperScreenMid {
+        visibility: visible;
+        display: block;
+    }
+}
+
+@media (max-width: 740px) {
+    .swiperScreenMid {
+        visibility: hidden;
+        display: none;
+    }
+
+    .swiperScreenSmall {
+        visibility: visible;
+        display: block;
+    }
+
+    .cardProjectItem {
+        width: 90vw;
+        padding: 10px;
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+        border-radius: 10px;
+    }
+
+    .title {
+        font-size: 6vw;
+    }
+}

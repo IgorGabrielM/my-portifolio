@@ -4,6 +4,7 @@ import { ProjectsModel } from "../models/Projects.model";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
+import { Pagination } from 'swiper';
 
 export default function Projects() {
     const [projects, setProjects]: [ProjectsModel[], any] = useState([
@@ -61,13 +62,14 @@ export default function Projects() {
 
     return (
         <div>
-            <h2 className='text-6xl mb-10 flex justify-center'>Projetos</h2>
+            <div className={styles.title}>
+                <h2 className='mb-10 flex justify-center'>Projetos</h2>
+            </div>
             <div className='ml-5'>
                 <Swiper
-                    spaceBetween={50}
+                    className={styles.swiperScreenLarge}
+                    spaceBetween={70}
                     slidesPerView={3.5}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
                 >
                     {
                         projects !== null ? projects.map((project) => {
@@ -78,16 +80,63 @@ export default function Projects() {
                                             <strong className='text-4xl text-black my-2'>{project.name}</strong>
                                             <img src={project.language.image} alt={project.language.title} className='w-12' />
                                         </div>
-                                        <img className='w-80 rounded-lg mt-3' src={project.image} alt={project.name + 'image'} />
+                                        <div className='w-full flex justify-center'>
+                                            <img className='w-80 rounded-lg mt-3' src={project.image} alt={project.name + 'image'} />
+                                        </div>
                                     </div>
                                 </SwiperSlide>
                             )
                         }) : 'Nenhum projeto encontrado'
                     }
-
+                </Swiper>
+                <Swiper
+                    className={styles.swiperScreenMid}
+                    spaceBetween={200}
+                    slidesPerView={2}
+                >
+                    {
+                        projects !== null ? projects.map((project) => {
+                            return (
+                                <SwiperSlide>
+                                    <div className={styles.cardProjectItem}>
+                                        <div className="flex justify-between px-5 my-2">
+                                            <strong className='text-4xl text-black my-2'>{project.name}</strong>
+                                            <img src={project.language.image} alt={project.language.title} className='w-12' />
+                                        </div>
+                                        <div className='w-full flex justify-center'>
+                                            <img className='w-80 rounded-lg mt-3' src={project.image} alt={project.name + 'image'} />
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        }) : 'Nenhum projeto encontrado'
+                    }
+                </Swiper>
+                <Swiper
+                    className={styles.swiperScreenSmall}
+                    slidesPerView={1.2}
+                    spaceBetween={150}
+                    modules={[Pagination]}
+                >
+                    {
+                        projects !== null ? projects.map((project) => {
+                            return (
+                                <SwiperSlide>
+                                    <div className={styles.cardProjectItem}>
+                                        <div className="flex justify-between px-5 my-2">
+                                            <strong className='text-4xl text-black my-2'>{project.name}</strong>
+                                            <img src={project.language.image} alt={project.language.title} className='w-12' />
+                                        </div>
+                                        <div className='w-full flex justify-center'>
+                                            <img className='w-80 rounded-lg mt-3' src={project.image} alt={project.name + 'image'} />
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        }) : 'Nenhum projeto encontrado'
+                    }
                 </Swiper>
             </div>
-
         </div>
     )
 }
