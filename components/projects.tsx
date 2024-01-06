@@ -9,6 +9,7 @@ import { Pagination } from 'swiper';
 export default function Projects() {
     const [projects, setProjects]: [ProjectsModel[], any] = useState([
         {
+            id: 1,
             name: 'Pokedex',
             description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
             image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
@@ -19,6 +20,7 @@ export default function Projects() {
             },
         },
         {
+            id: 2,
             name: 'Pokedex',
             description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
             image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
@@ -29,6 +31,7 @@ export default function Projects() {
             },
         },
         {
+            id: 3,
             name: 'Pokedex',
             description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
             image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
@@ -39,6 +42,7 @@ export default function Projects() {
             },
         },
         {
+            id: 4,
             name: 'Pokedex',
             description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
             image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
@@ -49,6 +53,7 @@ export default function Projects() {
             },
         },
         {
+            id: 5,
             name: 'Pokedex',
             description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
             image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
@@ -63,7 +68,7 @@ export default function Projects() {
     return (
         <div>
             <div className={styles.title}>
-                <h2 className='mb-10 flex justify-center'>Projetos</h2>
+                <h2 className='mb-5 flex justify-center'>Projetos</h2>
             </div>
             <div className='ml-5'>
                 <Swiper
@@ -74,7 +79,7 @@ export default function Projects() {
                     {
                         projects !== null ? projects.map((project) => {
                             return (
-                                <SwiperSlide>
+                                <SwiperSlide key={project.id}>
                                     <div className={styles.cardProjectItem}>
                                         <div className="flex justify-between px-5 my-2">
                                             <strong className='text-4xl text-black my-2'>{project.name}</strong>
@@ -97,7 +102,7 @@ export default function Projects() {
                     {
                         projects !== null ? projects.map((project) => {
                             return (
-                                <SwiperSlide>
+                                <SwiperSlide key={project.id}>
                                     <div className={styles.cardProjectItem}>
                                         <div className="flex justify-between px-5 my-2">
                                             <strong className='text-4xl text-black my-2'>{project.name}</strong>
@@ -121,7 +126,7 @@ export default function Projects() {
                     {
                         projects !== null ? projects.map((project) => {
                             return (
-                                <SwiperSlide>
+                                <SwiperSlide key={project.id}>
                                     <div className={styles.cardProjectItem}>
                                         <div className="flex justify-between px-5 my-2">
                                             <strong className='text-4xl text-black my-2'>{project.name}</strong>

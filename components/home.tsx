@@ -3,7 +3,6 @@ export default function Welcome() {
         <div>
             <div>
                 <h1>
-
                     Igor Gabriel
                 </h1>
             </div>

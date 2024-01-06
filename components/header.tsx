@@ -24,7 +24,7 @@ export default function Header() {
             <div className={styles.headerCompact}>
                 <div className={styles.headerItem}>
                     <div className={styles.headerBox}>
-                        <List size={32} color="purple" weight="fill" className={styles.headerItemIcon} />
+                        <List size={32} color="white" weight="fill" className={styles.headerItemIcon} />
                     </div>
                 </div>
             </div>

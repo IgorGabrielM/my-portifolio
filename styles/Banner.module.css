@@ -32,6 +32,7 @@
     }
 
     .circleFromImage {
+        display: none;
         background-color: #131313;
         margin-top: 30px;
         border-radius: 100vw;

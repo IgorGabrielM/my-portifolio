@@ -45,14 +45,13 @@ export default function Skills() {
             id: 3,
             title: 'Next',
             description: 'Desenvolvo aplicações pro hobbiie pois é uma linguagem mt funcional e divertida',
-            color: '#00CCC0',
             image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
             level: 3,
         }
     ])
 
     return (
-        <div className='h-fit p-20 m-10 rounded-md max-[550px]:w-screen max-[550px]:m-0 text-center shadow-[#d79bff69]'>
+        <div className='h-fit p-10 mx-10 rounded-md max-[550px]:w-screen max-[550px]:m-0 text-center shadow-[#d79bff69]'>
             <div className={styles.title}>
                 <h2 >Habilidades</h2>
             </div>
@@ -60,12 +59,12 @@ export default function Skills() {
                 <div className='grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 shadow-[#d79bff69] '>
                     {skills !== null ? skills.map((skill) => {
                         return (
-                            <div className='w-64 h-fit p-5 bg-zinc-300 rounded-md text-[#181718] shadow-lg shadow-[#d79bff69]'>
+                            <div key={skill.id} className='w-64 h-fit p-5 border-2 text-gray-200 border-gray-600 rounded-md'>
                                 <div className='text-3xl flex justify-between items-center mx-5'>
                                     <h1>{skill.title}</h1>
-                                    <img src={skill.image} className='w-12'></img>
+                                    <img src={skill.image} className='w-12 p-1 bg-slate-200 rounded-full'></img>
                                 </div>
-                                <hr className='my-2 border-2 border-gray-400' />
+                                <hr className='my-2 border-t-2 border-gray-400' />
                                 <div className='text-2xl  text-left'>
                                     <p>{skill.description}</p>
                                 </div>
@@ -74,7 +73,7 @@ export default function Skills() {
 
                                         {levelNames !== null ? levelNames.map((levelName, index) => {
                                             return (
-                                                <li className={skill.level >= index + 1 ? styles.isComplete : undefined}><span>{levelName.title}</span></li>
+                                                <li key={levelName.title} className={skill.level >= index + 1 ? styles.isComplete : undefined}><span>{levelName.title}</span></li>
                                             )
                                         }) : <h1>Erro no sistema</h1>}
                                     </ol>
