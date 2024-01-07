@@ -3,7 +3,7 @@ import TrackVisibility from "react-on-screen";
 import { useEffect, useState } from "react";
 import 'animate.css'
 
-export default function Banner() {
+export default function Banner({ id }: { id: string }) {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
@@ -46,7 +46,7 @@ export default function Banner() {
     }
 
     return (
-        <div className="bg-[url('/banner-bg.png')]">
+        <div id={id} className="bg-[url('/banner-bg.png')]">
             <div className={styles.bannerPage}>
                 <TrackVisibility className={styles.boxTextBanner}>
                     {({ isVisible }) =>

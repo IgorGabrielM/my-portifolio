@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Header></Header>
-      <Banner></Banner>
-      <Skills></Skills>
-      <Projects></Projects>
-      <AboutMe></AboutMe>
+      <Banner id="banner"></Banner>
+      <Skills id="skills"></Skills>
+      <Projects id="projects"></Projects>
+      <AboutMe id="about-me"></AboutMe>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import styles from '../styles/skill.module.css'
 import { useState } from "react";
 import { SkillModel } from "../models/Skill.model";
 
-export default function Skills() {
+export default function Skills({ id }: { id: string }) {
     const [levelNames, handleLevelNames]: [{ title: string, value: number }[], any] = useState([
         {
             title: "Iniciante",
@@ -51,7 +51,7 @@ export default function Skills() {
     ])
 
     return (
-        <div className='h-fit p-10 mx-10 rounded-md max-[550px]:w-screen max-[550px]:m-0 text-center shadow-[#d79bff69]'>
+        <div id={id} className='h-fit p-10 mx-10 rounded-md max-[550px]:w-screen max-[550px]:m-0 text-center shadow-[#d79bff69]'>
             <div className={styles.title}>
                 <h2 >Habilidades</h2>
             </div>

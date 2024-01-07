@@ -5,7 +5,7 @@ import { Pagination } from 'swiper';
 import { useState } from 'react';
 
 
-export default function AboutMe() {
+export default function AboutMe({ id }: { id: string }) {
     const [professionalXp, setProfessionalXp] = useState<{ id: number, role: string, company: string, duration: string }[]>([
         {
             id: 1,
@@ -51,7 +51,7 @@ export default function AboutMe() {
 
     return (
         <>
-            <div className='w-full flex justify-center'>
+            <div id={id} className='w-full flex justify-center'>
                 <div className='w-11/12 md:w-10/12 h-fit mx-5 py-8 flex flex-col md:flex-row justify-between gap-4'>
                     <div className='w-full md:border-r-2 md:border-gray-700'>
                         <div>

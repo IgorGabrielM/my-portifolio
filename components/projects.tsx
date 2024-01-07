@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Pagination } from 'swiper';
 
-export default function Projects() {
+export default function Projects({ id }: { id: string }) {
     const [projects, setProjects]: [ProjectsModel[], any] = useState([
         {
             id: 1,
@@ -66,7 +66,7 @@ export default function Projects() {
     ])
 
     return (
-        <div>
+        <div id={id}>
             <div className={styles.title}>
                 <h2 className='mb-5 flex justify-center'>Projetos</h2>
             </div>

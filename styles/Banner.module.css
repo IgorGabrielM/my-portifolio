@@ -10,13 +10,13 @@
 }
 
 .circleFromImage {
-    background-color: #131313;
+    background-color: #272727;
     margin-top: 100px;
     border-radius: 800px;
 }
 
 .programingBro {
-    width: 900px;
+    width: 700px;
 }
 
 @media only screen and (max-width: 1150px) {
