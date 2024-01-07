@@ -80,7 +80,7 @@ export default function AboutMe({ id }: { id: string }) {
                                     formations && formations.length ? formations.map((formation) => {
                                         return (
                                             <SwiperSlide key={formation.id}>
-                                                <div className='w-48 h-32 px-5 py-2 border-2 border-gray-700 rounded-lg flex flex-col justify-center'>
+                                                <div className='w-48 h-32 px-5 py-2 border-2 border-gray-700 rounded-lg flex flex-col justify-center cursor-pointer'>
                                                     <h4 className='font-extrabold text-lg'>{formation.title} - {formation.institution}</h4>
                                                     <p className='text-md'>{formation.level}</p>
                                                     <span className='text-gray-400'>{formation.duration}</span>
@@ -105,7 +105,7 @@ export default function AboutMe({ id }: { id: string }) {
                                     professionalXp && professionalXp.length ? professionalXp.map((profXp) => {
                                         return (
                                             <SwiperSlide key={profXp.id}>
-                                                <div className='w-48 h-32 px-5 py-2 border-2 border-gray-700 rounded-lg flex flex-col justify-center'>
+                                                <div className='w-48 h-32 px-5 py-2 border-2 border-gray-700 rounded-lg flex flex-col justify-center cursor-pointer'>
                                                     <h4 className='font-extrabold text-lg'>{profXp.role}</h4>
                                                     <p className='text-md'>{profXp.company}</p>
                                                     <span className='text-gray-400'>{profXp.duration}</span>
@@ -127,7 +127,7 @@ export default function AboutMe({ id }: { id: string }) {
                                     courses && courses.length ? courses.map((courses) => {
                                         return (
                                             <SwiperSlide key={courses.id}>
-                                                <div className='w-52 h-fit p-5 border-2 border-gray-700 rounded-lg flex flex-col justify-center'>
+                                                <div className='w-52 h-fit p-5 border-2 border-gray-700 rounded-lg flex flex-col justify-center cursor-pointer'>
                                                     <img src={`/images/courses/${courses.image}`} alt='Imagem do certificado do curso' className='w-80 h-fit object-cover rounded-xl' />
                                                     <h4 className='font-extrabold text-lg mt-2'>{courses.title}</h4>
                                                     <span className='text-gray-400'>{courses.duration}</span>

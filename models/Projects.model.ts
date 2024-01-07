@@ -2,7 +2,7 @@ export type ProjectsModel = {
     id: number;
     name: string;
     description: string;
-    image: string;
+    images: string[];
     link: string;
     language: {
         title: string;

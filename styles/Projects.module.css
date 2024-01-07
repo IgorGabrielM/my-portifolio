@@ -3,6 +3,7 @@
     padding: 10px;
     background-image: linear-gradient(to right, #667eea, #764ba2);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .swiperScreenMid,
