@@ -68,7 +68,7 @@ export default function Projects({ id }: { id: string }) {
     return (
         <div id={id}>
             <div className={styles.title}>
-                <h2 className='mb-5 flex justify-center'>Projetos</h2>
+                <h2 className='mb-5 flex justify-center text-4xl'>Projetos</h2>
             </div>
             <div className='ml-5'>
                 <Swiper

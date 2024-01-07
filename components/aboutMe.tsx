@@ -27,6 +27,12 @@ export default function AboutMe({ id }: { id: string }) {
             title: "Boas Práticas de Desenvolvimento com Angular",
             image: "course-1.png",
             duration: "8 horas"
+        },
+        {
+            id: 2,
+            title: "Cypress: Automação de testes E2E",
+            image: "course-2.png",
+            duration: "8 horas"
         }
     ])
 

@@ -53,7 +53,7 @@ export default function Skills({ id }: { id: string }) {
     return (
         <div id={id} className='h-fit p-10 mx-10 rounded-md max-[550px]:w-screen max-[550px]:m-0 text-center shadow-[#d79bff69]'>
             <div className={styles.title}>
-                <h2 >Habilidades</h2>
+                <h2 className='text-4xl' >Habilidades</h2>
             </div>
             <div className="flex justify-center">
                 <div className='grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 shadow-[#d79bff69] '>
