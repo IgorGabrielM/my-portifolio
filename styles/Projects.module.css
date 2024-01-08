@@ -1,8 +1,8 @@
 .cardProjectItem {
     width: 450px;
     padding: 10px;
-    background-image: linear-gradient(to right, #667eea, #764ba2);
     border-radius: 10px;
+    border: 2px solid rgb(55 65 81);
     cursor: pointer;
 }
 
@@ -25,7 +25,6 @@
     .cardProjectItem {
         width: 450px;
         padding: 10px;
-        background-image: linear-gradient(to right, #667eea, #764ba2);
         border-radius: 10px;
     }
 
@@ -49,7 +48,6 @@
     .cardProjectItem {
         width: 90vw;
         padding: 10px;
-        background-image: linear-gradient(to right, #667eea, #764ba2);
         border-radius: 10px;
     }
 
