@@ -91,6 +91,7 @@ export default function Projects({ id }: { id: string }) {
 
     const [projectSelected, setProjectSelected] = useState<ProjectsModel>()
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [imageToShow, setImageToShow] = useState<string>();
 
     function handleProjectSelected(projectSelected: ProjectsModel): void {
         setProjectSelected(projectSelected);
@@ -188,37 +189,43 @@ export default function Projects({ id }: { id: string }) {
                                 <div className="px-4 sm:p-4 pb-0">
                                     <div className="sm:flex sm:items-start">
                                         <div className="mt-3 text-center mx-auto sm:mt-0 sm:text-left">
-                                            <div className='w-11/12 h-fit text-center'>
-                                                <div className='flex justify-between items-center my-2 mx-5'>
-                                                    <h2 className='text-2xl'>{projectSelected?.name}</h2>
-                                                    <div className='p-1 rounded-full bg-slate-300'>
-                                                        <img src={projectSelected?.language.image} alt={projectSelected?.language.title} className='w-12' />
+                                            {
+                                                !imageToShow ?
+                                                    <div className='w-11/12 h-fit text-center'>
+                                                        <div className='flex justify-between items-center my-2 mx-5'>
+                                                            <h2 className='text-2xl'>{projectSelected?.name}</h2>
+                                                            <div className='p-1 rounded-full bg-slate-300'>
+                                                                <img src={projectSelected?.language.image} alt={projectSelected?.language.title} className='w-12' />
+                                                            </div>
+                                                        </div>
+                                                        <Swiper
+                                                            className="w-[300px] md:w-[400px] my-2"
+                                                            spaceBetween={15}
+                                                            slidesPerView={1.2}
+                                                        >
+                                                            {
+                                                                projectSelected?.images && projectSelected.images.length ? projectSelected.images.map((imageProject) => {
+                                                                    return (
+                                                                        <SwiperSlide key={imageProject} onClick={() => setImageToShow(imageProject)}>
+                                                                            <img className='w-80 h-48 object-cover rounded-lg mt-3' src={'/images/projects/' + imageProject} alt={projectSelected.name + ' image'} />
+                                                                        </SwiperSlide>
+                                                                    )
+                                                                }) : 'Nenhuma formação'
+                                                            }
+                                                        </Swiper>
+                                                        <p className='my-2'>{projectSelected?.description}</p>
+                                                        {projectSelected?.link ?
+                                                            <span>Link do repositório: <Link href={projectSelected.link} className='text-purple-400 hover:text-purple-600'>{projectSelected?.link}</Link></span>
+                                                            : <></>
+                                                        }
+                                                        <div className='w-full flex justify-end pt-1 border-t border-gray-600'>
+                                                            <button onClick={() => setIsOpen(false)} className='w-fit px-5 bg-purple-600 rounded-md mt-2 font-extrabold hover:bg-purple-800'>Fechar</button>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <Swiper
-                                                    className="w-[300px] md:w-[400px] my-2"
-                                                    spaceBetween={15}
-                                                    slidesPerView={1.2}
-                                                >
-                                                    {
-                                                        projectSelected?.images && projectSelected.images.length ? projectSelected.images.map((imageProject) => {
-                                                            return (
-                                                                <SwiperSlide key={imageProject}>
-                                                                    <img className='w-80 h-48 object-cover rounded-lg mt-3' src={'/images/projects/' + imageProject} alt={projectSelected.name + ' image'} />
-                                                                </SwiperSlide>
-                                                            )
-                                                        }) : 'Nenhuma formação'
-                                                    }
-                                                </Swiper>
-                                                <p className='my-2'>{projectSelected?.description}</p>
-                                                {projectSelected?.link ?
-                                                    <span>Link do repositório: <Link href={projectSelected.link} className='text-purple-400 hover:text-purple-600'>{projectSelected?.link}</Link></span>
-                                                    : <></>
-                                                }
-                                                <div className='w-full flex justify-end pt-1 border-t border-gray-600'>
-                                                    <button onClick={() => setIsOpen(false)} className='w-fit px-5 bg-purple-600 rounded-md mt-2 font-extrabold hover:bg-purple-800'>Fechar</button>
-                                                </div>
-                                            </div>
+                                                    : <div className='w-11/12 h-fit text-center'>
+                                                        <img className='w-fit h-fit object-cover rounded-lg mt-3' src={'/images/projects/' + imageToShow} alt={projectSelected?.name + ' image'} />
+                                                    </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>
