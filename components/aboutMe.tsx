@@ -24,12 +24,18 @@ export default function AboutMe({ id }: { id: string }) {
     const [courses, setCourses] = useState<{ id: number, title: string, image: string, duration: string }[]>([
         {
             id: 1,
+            title: "Customer experience management",
+            image: "course-3.jpeg",
+            duration: "40 horas"
+        },
+        {
+            id: 2,
             title: "Boas Práticas de Desenvolvimento com Angular",
             image: "course-1.png",
             duration: "8 horas"
         },
         {
-            id: 2,
+            id: 3,
             title: "Cypress: Automação de testes E2E",
             image: "course-2.png",
             duration: "8 horas"
@@ -63,8 +69,8 @@ export default function AboutMe({ id }: { id: string }) {
                         <div>
                             <h2 className='text-xl md:text-2xl text-center'>Sobre mim</h2>
                             <p className='md:mx-10 mt-2 text-center'>
-                                Eu sou Igor Gabriel, um desenvolvedor de software com três anos de experiência,
-                                focado principalmente no desenvolvimento de aplicativos utilizando Ionic e com habilidades sólidas em Angular.
+                                Olá eu sou Igor Gabriel, um desenvolvedor de software com três anos de experiência,
+                                focado principalmente no desenvolvimento frontend e de aplicativos utilizando Ionic e com habilidades sólidas em Angular.
                                 Minha jornada profissional começou há dois anos, durante os quais contribuí para projetos significativos,
                                 priorizando não apenas a funcionalidade, mas também aprimorando a experiência do usuário.
                             </p>
@@ -73,8 +79,8 @@ export default function AboutMe({ id }: { id: string }) {
                             <h2 className='text-xl md:text-2xl mt-5 mb-2 text-center'>Formação</h2>
                             <Swiper
                                 className="w-[400px] md:w-[500px]"
-                                spaceBetween={20}
-                                slidesPerView={2}
+                                spaceBetween={15}
+                                slidesPerView={2.2}
                             >
                                 {
                                     formations && formations.length ? formations.map((formation) => {
@@ -99,7 +105,7 @@ export default function AboutMe({ id }: { id: string }) {
                             <Swiper
                                 className="w-[400px] md:w-[500px]"
                                 spaceBetween={15}
-                                slidesPerView={2}
+                                slidesPerView={2.2}
                             >
                                 {
                                     professionalXp && professionalXp.length ? professionalXp.map((profXp) => {
@@ -121,7 +127,7 @@ export default function AboutMe({ id }: { id: string }) {
                             <Swiper
                                 className="w-[400px] md:w-[500px]"
                                 spaceBetween={15}
-                                slidesPerView={2}
+                                slidesPerView={2.2}
                             >
                                 {
                                     courses && courses.length ? courses.map((courses) => {

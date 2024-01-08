@@ -11,16 +11,16 @@ export default function Header() {
                 <div>
                     <div className='w-screen flex justify-end items-center mt-5'>
                         <Link href="#banner">
-                            <h2 className='text-3xl mx-5'>Home</h2>
+                            <h2 className='text-2xl mx-5'>Home</h2>
                         </Link>
                         <Link href="#skills">
-                            <h2 className='text-3xl mx-5'>Skills</h2>
+                            <h2 className='text-2xl mx-5'>Skills</h2>
                         </Link>
                         <Link href="#projects">
-                            <h2 className='text-3xl mr-10'>Projects</h2>
+                            <h2 className='text-2xl mr-10'>Projects</h2>
                         </Link>
                         <Link href="#about-me">
-                            <h2 className='text-3xl mr-10'>Sobre</h2>
+                            <h2 className='text-2xl mr-10'>Sobre</h2>
                         </Link>
                         <Link href="https://www.linkedin.com/in/igor-gabriel-martins-ramos/" target='_blank'>
                             <LinkedinLogo size={80} />
