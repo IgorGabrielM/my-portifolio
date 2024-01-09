@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Pagination } from 'swiper';
 import Link from 'next/link';
+import { ArrowCircleLeft, MagnifyingGlass } from 'phosphor-react';
 
 export default function Projects({ id }: { id: string }) {
     const [projects, setProjects] = useState<ProjectsModel[]>([
@@ -76,17 +77,11 @@ export default function Projects({ id }: { id: string }) {
                 image: 'https://www.svgrepo.com/show/327369/logo-ionic.svg',
             },
         },
-        /* {
-            id: 3,
-            name: 'Cine-explore',
-            description: 'Com a ideia de fazer uma pokedex em mente bastava executar, comecei buscando várias APIs com dados de vários pokemons, então decidi usar a mais famosa, a PokeAPI',
-            image: 'https://github.com/IgorGabrielM/my-pokedex/raw/main/src/assets/page.png',
-            link: 'https://github.com/IgorGabrielM/my-pokedex',
+        /*
             language: {
                 title: 'Angular',
                 image: 'https://www.svgrepo.com/show/327335/logo-angular.svg',
-            },
-        } */
+        */
     ])
 
     const [projectSelected, setProjectSelected] = useState<ProjectsModel>()
@@ -116,7 +111,7 @@ export default function Projects({ id }: { id: string }) {
                                     <div className={styles.cardProjectItem}>
                                         <div className="flex justify-between px-5 my-2">
                                             <strong className='text-4xl text-white font-extrabold my-2'>{project.name}</strong>
-                                            <div className='p-2 bg-slate-300 rounded-full'>
+                                            <div className='h-fit p-2 bg-slate-300 rounded-full'>
                                                 <img src={project.language.image} alt={project.language.title} className='w-12' />
                                             </div>
                                         </div>
@@ -140,8 +135,10 @@ export default function Projects({ id }: { id: string }) {
                                 <SwiperSlide key={project.id}>
                                     <div className={styles.cardProjectItem}>
                                         <div className="flex justify-between px-5 my-2">
-                                            <strong className='text-4xl text-black my-2'>{project.name}</strong>
-                                            <img src={project.language.image} alt={project.language.title} className='w-12' />
+                                            <strong className='text-4xl text-white my-2'>{project.name}</strong>
+                                            <div className='h-fit p-2 bg-slate-300 rounded-full'>
+                                                <img src={project.language.image} alt={project.language.title} className='w-12' />
+                                            </div>
                                         </div>
                                         <div className='w-full flex justify-center'>
                                             <img className='w-80 h-48 object-cover rounded-lg mt-3' src={'/images/projects/' + project.images[0]} alt={project.name + ' image'} />
@@ -154,8 +151,8 @@ export default function Projects({ id }: { id: string }) {
                 </Swiper>
                 <Swiper
                     className={styles.swiperScreenSmall}
-                    slidesPerView={1.2}
-                    spaceBetween={150}
+                    slidesPerView={1}
+                    spaceBetween={20}
                     modules={[Pagination]}
                 >
                     {
@@ -164,8 +161,10 @@ export default function Projects({ id }: { id: string }) {
                                 <SwiperSlide key={project.id}>
                                     <div className={styles.cardProjectItem}>
                                         <div className="flex justify-between px-5 my-2">
-                                            <strong className='text-4xl text-black my-2'>{project.name}</strong>
-                                            <img src={project.language.image} alt={project.language.title} className='w-12' />
+                                            <strong className='text-4xl text-white my-2'>{project.name}</strong>
+                                            <div className='h-fit p-2 bg-slate-300 rounded-full'>
+                                                <img src={project.language.image} alt={project.language.title} className='w-12' />
+                                            </div>
                                         </div>
                                         <div className='w-full flex justify-center'>
                                             <img className='w-80 h-48 object-cover rounded-lg mt-3' src={'/images/projects/' + project.images[0]} alt={project.name + ' image'} />
@@ -180,12 +179,13 @@ export default function Projects({ id }: { id: string }) {
 
             <div className="relative">
                 {isOpen && (
-                    <div className="fixed inset-0 overflow-y-auto  z-50">
+                    <div className="fixed inset-0 overflow-y-auto z-50">
                         <div className="flex items-end justify-center min-h-screen pt-4 pb-20 text-center sm:block sm:p-0">
                             <div className="fixed inset-0 transition-opacity" aria-hidden="true">
                                 <div className="absolute inset-0 bg-gray-800 opacity-75" onClick={() => setIsOpen(false)}></div>
                             </div>
-                            <div className="inline-block align-bottom bg-stone-800 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                            <div className={!imageToShow ? "inline-block align-bottom bg-stone-800 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                                : "inline-block align-bottom bg-stone-800 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full"}>
                                 <div className="px-4 sm:p-4 pb-0">
                                     <div className="sm:flex sm:items-start">
                                         <div className="mt-3 text-center mx-auto sm:mt-0 sm:text-left">
@@ -208,6 +208,7 @@ export default function Projects({ id }: { id: string }) {
                                                                     return (
                                                                         <SwiperSlide key={imageProject} onClick={() => setImageToShow(imageProject)}>
                                                                             <img className='w-80 h-48 object-cover rounded-lg mt-3' src={'/images/projects/' + imageProject} alt={projectSelected.name + ' image'} />
+                                                                            <MagnifyingGlass className='w-9 h-9 absolute p-1 z-50 bg-purple-800 bottom-3 right-5 rounded-full text-white shadow-lg shadow-gray-800' size={32} />
                                                                         </SwiperSlide>
                                                                     )
                                                                 }) : 'Nenhuma formação'
@@ -222,8 +223,9 @@ export default function Projects({ id }: { id: string }) {
                                                             <button onClick={() => setIsOpen(false)} className='w-fit px-5 bg-purple-600 rounded-md mt-2 font-extrabold hover:bg-purple-800'>Fechar</button>
                                                         </div>
                                                     </div>
-                                                    : <div className='w-11/12 h-fit text-center'>
-                                                        <img className='w-fit h-fit object-cover rounded-lg mt-3' src={'/images/projects/' + imageToShow} alt={projectSelected?.name + ' image'} />
+                                                    : <div className='w-full h-fit text-center'>
+                                                        <img className='w-fit h-fit object-cover rounded-lg' src={'/images/projects/' + imageToShow} alt={projectSelected?.name + ' image'} />
+                                                        <ArrowCircleLeft className='w-9 h-9 absolute p-1 z-50 bg-purple-800 top-2 left-5 rounded-full text-white shadow-lg shadow-gray-800' size={32} onClick={() => setImageToShow(undefined)} />
                                                     </div>
                                             }
                                         </div>

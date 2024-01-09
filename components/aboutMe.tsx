@@ -80,7 +80,7 @@ export default function AboutMe({ id }: { id: string }) {
                             <Swiper
                                 className="w-[400px] md:w-[500px]"
                                 spaceBetween={15}
-                                slidesPerView={2.2}
+                                slidesPerView={2.05}
                             >
                                 {
                                     formations && formations.length ? formations.map((formation) => {
@@ -105,7 +105,7 @@ export default function AboutMe({ id }: { id: string }) {
                             <Swiper
                                 className="w-[400px] md:w-[500px]"
                                 spaceBetween={15}
-                                slidesPerView={2.2}
+                                slidesPerView={2.05}
                             >
                                 {
                                     professionalXp && professionalXp.length ? professionalXp.map((profXp) => {
@@ -126,8 +126,8 @@ export default function AboutMe({ id }: { id: string }) {
                             <h2 className='text-xl md:text-2xl mb-2 text-center'>Cursos</h2>
                             <Swiper
                                 className="w-[400px] md:w-[500px]"
-                                spaceBetween={15}
-                                slidesPerView={2.2}
+                                spaceBetween={40}
+                                slidesPerView={2.05}
                             >
                                 {
                                     courses && courses.length ? courses.map((courses) => {

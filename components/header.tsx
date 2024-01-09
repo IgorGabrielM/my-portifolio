@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import styles from '../styles/Header.module.css'
-import { GithubLogo, LinkedinLogo } from "phosphor-react";
+import { GithubLogo, LinkedinLogo, XCircle } from "phosphor-react";
 import { List } from "phosphor-react";
+import { useState } from 'react';
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div>
             <div className={styles.header}>
@@ -32,9 +35,39 @@ export default function Header() {
                 </div>
             </div>
             <div className={styles.headerCompact}>
-                <div className={styles.headerItem}>
-                    <div className={styles.headerBox}>
-                        <List size={32} color="white" weight="fill" className={styles.headerItemIcon} />
+                <div className='w-full flex justify-end mr-3 mt-2'>
+                    <List size={42} color="white" weight="fill" onClick={() => setIsOpen(!isOpen)} className={isOpen ? "bg-gray-700 p-2 rounded-t-md" : "" + " p-2"} />
+                    <div id="dropdownDivider" className={!isOpen ? "hidden" : "visible" + "z-10 absolute divide-y top-9 rounded-lg rounded-tr-none w-fit bg-gray-700 divide-gray-600"}>
+                        <ul className="p-2 text-md text-gray-200 cursor-pointer" aria-labelledby="dropdownDividerButton">
+                            <li>
+                                <Link href="#banner" className='block px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#skills" className='block px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
+                                    Skills
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#projects" className='block px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
+                                    Projects
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#about-me" className='block px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
+                                    Sobre
+                                </Link>
+                            </li>
+                            <li className='w-fit flex gap-2 mx-auto'>
+                                <Link href="https://www.linkedin.com/in/igor-gabriel-martins-ramos/" target='_blank' className='block py-2' onClick={() => setIsOpen(!isOpen)}>
+                                    <LinkedinLogo size={25} />
+                                </Link>
+                                <Link href="https://github.com/IgorGabrielM" target='_blank' className='block py-2' onClick={() => setIsOpen(!isOpen)}>
+                                    <GithubLogo size={25} />
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

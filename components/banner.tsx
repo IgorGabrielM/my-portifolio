@@ -46,7 +46,7 @@ export default function Banner({ id }: { id: string }) {
     }
 
     return (
-        <div id={id} className="bg-[url('/banner-bg.png')]">
+        <div id={id} className="">
             <div className={styles.bannerPage}>
                 <TrackVisibility className={styles.boxTextBanner}>
                     {({ isVisible }) =>
